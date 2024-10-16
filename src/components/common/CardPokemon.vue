@@ -17,7 +17,11 @@ const props = defineProps({
     </div>
     <div class="card-body">
       <h6 class="text-center font-bold text-sm">{{ pokemon.name }}</h6>
-      <button class="bg-blue-500 text-xs text-white p-1 w-full">Detail</button>
+      <a :href="`/detail/${pokemon.id}`">
+        <button class="bg-blue-500 text-xs text-white p-1 w-full">
+          Detail
+        </button>
+      </a>
     </div>
   </div>
 </template>
