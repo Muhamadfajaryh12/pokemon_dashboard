@@ -13,8 +13,17 @@ const PokemonAPI = (() => {
     }
   };
 
+  const GetPokemonId = async (id) => {
+    try {
+      const response = await axios.get(`${base_url}${id}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return {
     GetPokemon,
+    GetPokemonId,
   };
 })();
 
